@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fernetrest"
+version = "0.1.0"
+description = "Secure symmetric file encryption and decryption for data at rest using Fernet and PBKDF2."
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+authors = [
+    { name = "Security Developer" }
+]
+keywords = ["cryptography", "fernet", "encryption", "decryption", "pbkdf2", "security", "data-at-rest"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Topic :: Security :: Cryptography",
+]
+dependencies = [
+    "cryptography>=42.0.0",
+]
+
+[project.scripts]
+fernetrest = "fernetrest.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
